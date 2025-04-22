@@ -1,21 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Поехали!</title>
-    <meta name="description" content="Poehali.dev — запусти свой сайт за минуту!" />
-    <meta name="author" content="poehali.dev" />
-     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дом для Лап - Найди друга</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://placehold.co/50x50?text=🐾" alt="Лого">
+                    <span>Дом для Лап</span>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="active">Главная</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#animals">Наши животные</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
 
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS COMMENT! -->
-    <script src="https://cdn.poehali.dev/intertnal/js/pp-min-2.js"></script>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS COMMENT! -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Подари дом тому, кто в нём нуждается</h1>
+                <p>Наши питомцы очень ждут своих новых хозяев и любящую семью</p>
+                <a href="#animals" class="btn primary-btn">Найти друга</a>
+            </div>
+        </div>
+    </section>
 
-  </head>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">О нашем приюте</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Приют "Дом для Лап" был основан в 2015 году с целью помочь бездомным животным найти новый дом и любящих хозяев.</p>
+                    <p>Мы заботимся о здоровье, питании и эмоциональном благополучии всех наших подопечных, пока они ждут своих новых хозяев.</p>
+                    <p>За годы работы нам удалось найти новый дом для более чем 500 животных, и эта цифра продолжает расти благодаря поддержке волонтёров и неравнодушных людей.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-text">животных обрели дом</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-text">волонтёров помогают нам</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400?text=О+нас" alt="О приюте">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <section id="animals" class="animals">
+        <div class="container">
+            <h2 class="section-title">Наши питомцы ищут дом</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все животные</button>
+                <button class="filter-btn" data-filter="dog">Собаки</button>
+                <button class="filter-btn" data-filter="cat">Кошки</button>
+                <button class="filter-btn" data-filter="other">Другие животные</button>
+            </div>
+            <div class="animals-grid">
+                <div class="animal-card" data-type="dog">
+                    <div class="animal-image">
+                        <img src="https://placehold.co/300x300?text=Собака" alt="Рекс">
+                    </div>
+                    <div class="animal-info">
+                        <h3>Рекс</h3>
+                        <div class="animal-meta">
+                            <span class="type">Собака</span>
+                            <span class="age">3 года</span>
+                            <span class="gender">Мальчик</span>
+                        </div>
+                        <p>Рекс - энергичный и преданный пес. Обожает прогулки и активные игры. Хорошо обучен базовым командам.</p>
+                        <a href="#contact" class="btn primary-btn">Приютить</a>
+                    </div>
+                </div>
+                
+                <div class="animal-card" data-type="cat">
+                    <div class="animal-image">
+                        <img src="https://placehold.co/300x300?text=Кошка" alt="Муся">
+                    </div>
+                    <div class="animal-info">
+                        <h3>Муся</h3>
+                        <div class="animal-meta">
+                            <span class="type">Кошка</span>
+                            <span class="age">1 год</span>
+                            <span class="gender">Девочка</span>
+                        </div>
+                        <p>Муся - нежная и спокойная кошечка. Очень аккуратная, приучена к лотку. Будет отличным компаньоном в доме.</p>
+                        <a href="#contact" class="btn primary-btn">Приютить</a>
+                    </div>
+                </div>
+                
+                <div class="animal-card" data-type="dog">
+                    <div class="animal-image">
+                        <img src="https://placehold.co/300x300?text=Собака" alt="Дружок">
+                    </div>
+                    <div class="animal-info">
+                        <h3>Дружок</h3>
+                        <div class="animal-meta">
+                            <span class="type">Собака</span>
+                            <span class="age">5 лет</span>
+                            <span class="gender">Мальчик</span>
+                        </div>
+                        <p>Дружок - спокойный и умный пес. Отлично подойдет для семьи с детьми. Любит долгие прогулки и тишину.</p>
+                        <a href="#contact" class="btn primary-btn">Приютить</a>
+                    </div>
+                </div>
+                
+                <div class="animal-card" data-type="cat">
+                    <div class="animal-image">
+                        <img src="https://placehold.co/300x300?text=Кошка" alt="Барсик">
+                    </div>
+                    <div class="animal-info">
+                        <h3>Барсик</h3>
+                        <div class="animal-meta">
+                            <span class="type">Кот</span>
+                            <span class="age">2 года</span>
+                            <span class="gender">Мальчик</span>
+                        </div>
+                        <p>Барсик - очень ласковый и игривый кот. Любит сидеть на коленях и мурчать. Отлично ладит с детьми и другими животными.</p>
+                        <a href="#contact" class="btn primary-btn">Приютить</a>
+                    </div>
+                </div>
+                
+                <div class="animal-card" data-type="other">
+                    <div class="animal-image">
+                        <img src="https://placehold.co/300x300?text=Кролик" alt="Пушок">
+                    </div>
+                    <div class="animal-info">
+                        <h3>Пушок</h3>
+                        <div class="animal-meta">
+                            <span class="type">Кролик</span>
+                            <span class="age">1 год</span>
+                            <span class="gender">Мальчик</span>
+                        </div>
+                        <p>Пушок - милый декоративный кролик. Очень чистоплотный и спокойный. Идеален для содержания в квартире.</p>
+                        <a href="#contact" class="btn primary-btn">Приютить</a>
+                    </div>
+                </div>
+                
+                <div class="animal-card" data-type="dog">
+                    <div class="animal-image">
+                        <img src="https://placehold.co/300x300?text=Собака" alt="Ляля">
+                    </div>
+                    <div class="animal-info">
+                        <h3>Ляля</h3>
+                        <div class="animal-meta">
+                            <span class="type">Собака</span>
+                            <span class="age">2 года</span>
+                            <span class="gender">Девочка</span>
+                        </div>
+                        <p>Ляля - активная и дружелюбная собака. Обожает играть и бегать. Станет отличным другом для активного человека.</p>
+                        <a href="#contact" class="btn primary-btn">Приютить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Связаться с нами</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Наши контакты</h3>
+                    <p>Если вы хотите приютить животное или помочь приюту, свяжитесь с нами любым удобным способом.</p>
+                    <ul class="contact-list">
+                        <li><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 123</li>
+                        <li><strong>Телефон:</strong> +7 (999) 123-45-67</li>
+                        <li><strong>Email:</strong> info@domdlyalap.ru</li>
+                        <li><strong>Часы работы:</strong> Пн-Пт: 10:00 - 19:00, Сб-Вс: 10:00 - 17:00</li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h3>Оставить заявку</h3>
+                    <form id="pet-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pet">Какое животное вас интересует</label>
+                            <input type="text" id="pet" name="pet">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://placehold.co/50x50?text=🐾" alt="Лого">
+                    <span>Дом для Лап</span>
+                </div>
+                <div class="footer-nav">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#animals">Наши животные</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>г. Москва, ул. Примерная, д. 123</li>
+                        <li>+7 (999) 123-45-67</li>
+                        <li>info@domdlyalap.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">OK</a>
+                        <a href="#" class="social-link">TG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Дом для Лап. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('show');
+        });
+        
+        // Фильтрация животных
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const animalCards = document.querySelectorAll('.animal-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Убираем активный класс со всех кнопок
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Добавляем активный класс нажатой кнопке
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                animalCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.type === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Обработка формы
+        const petForm = document.getElementById('pet-form');
+        
+        petForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
+            petForm.reset();
+        });
+    </script>
+</body>
 </html>
